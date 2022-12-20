@@ -22,7 +22,7 @@ int main() {
         x = (a + b) / 2;
 
         if (f(x) == 0) {
-            cout << x;
+            cout << f(x);
            
         } else {
             if (f(a) * f(b) < 0) {
@@ -33,7 +33,7 @@ int main() {
         }
     } while (err >= 1/pow(2.7, 6));
 
-    cout << x;
+    cout << f(x);
     
 
 
