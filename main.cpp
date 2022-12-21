@@ -9,7 +9,7 @@ double f (float num) {
 
 int main() {
 
-    float a=0, b=0, x, err;
+    float a, b, x, err;
 
 
     while (f(a)*f(b)>=0) {
@@ -29,7 +29,7 @@ int main() {
             } else b = x;
 
         }
-            err = abs((b - a) / 2);
+            err = (b - a) / 2;
         
     } while (err >= 1e-6);
 
