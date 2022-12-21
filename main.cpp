@@ -3,12 +3,13 @@
 using namespace std;
 
 double f (float num) {
-    return (pow(num, 2) * cos(num) + 1);
+    double fx = (pow(num, 2) * cos(num) + 1);
+    return fx;
 }
 
 int main() {
 
-    float a=0, b=0, x, err=0;
+    float a=0, b=0, x, err=1;
 
     cout << "inserire estremi";
     cin >> a >> b;
@@ -22,8 +23,11 @@ int main() {
         x = (a + b) / 2;
 
         if (f(x) == 0) {
-            cout << f(x);
-           
+            x = x*10000;
+            x =(int)x;
+            x = x/10000;
+            cout << x;
+
         } else {
             if (f(a) * f(b) < 0) {
                 b = x;
@@ -31,13 +35,13 @@ int main() {
 
             err = abs((b - a) / 2);
         }
-    } while (err >= 1/pow(2.7, 6));
+    } while (err >= 1e-6);
 
-    cout << f(x);
+    x = x*10000;
+    x =(int)x;
+    x = x/10000;
+    cout << x;
     
-
-
-
-
+    
     return 0;
 }
