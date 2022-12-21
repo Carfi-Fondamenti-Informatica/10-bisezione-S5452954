@@ -25,8 +25,8 @@ int main() {
 
         } else {
             if (f(a) * f(b) < 0) {
-                b = x;
-            } else a = x;
+                a = x;
+            } else b = x;
 
         }
             err = abs((b - a) / 2);
