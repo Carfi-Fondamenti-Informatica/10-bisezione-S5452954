@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include "cmath"
 using namespace std;
 
 double f (float num) {
@@ -9,7 +9,7 @@ double f (float num) {
 
 int main() {
 
-    float a=0, b=0, x, err=1;
+    float a=0, b=0, x, err;
 
 
     while (f(a)*f(b)>=0) {
